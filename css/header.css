@@ -1,0 +1,26 @@
+header {
+  box-sizing: border-box;
+  background-color: black;
+  width: 100%;
+  padding: 2rem;
+  color: snow;
+}
+
+header a:link,
+header a:visited,
+header a:active {
+  text-decoration: none;
+  color: snow;
+}
+
+header a:hover {
+  color: crimson;
+  text-decoration: dashed;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding-right: 1rem;
+}

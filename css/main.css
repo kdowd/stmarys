@@ -1,0 +1,91 @@
+html,
+body {
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  background-color: #424242;
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Media Queries: New Range Syntax */
+@media (width > 1200px) {
+  .content {
+    display: grid;
+    grid-template-columns: minmax(33%, 1fr) 1.66fr;
+    gap: 2rem;
+  }
+}
+
+.content ul {
+  color: snow;
+  font-size: 24px;
+}
+
+.content > div:not(:last-child) {
+  border-right: 1px solid black;
+  min-height: 100vh;
+}
+
+.content > div {
+  padding: 0 2rem;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: snow;
+  text-decoration: dashed;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+}
+
+textarea {
+  display: none;
+  overflow: hidden;
+  resize: none;
+}
+
+@media (width > 600px) {
+  textarea {
+    display: initial;
+  }
+}
