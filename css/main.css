@@ -22,7 +22,7 @@ body {
 @media (width > 1200px) {
   .content {
     display: grid;
-    grid-template-columns: minmax(33%, 1fr) 1.66fr;
+    grid-template-columns: minmax(43%, 1fr) 1.66fr;
     gap: 2rem;
   }
 }

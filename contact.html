@@ -8,6 +8,35 @@
     <link rel="stylesheet" href="./css/colours.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/header.css" />
+
+    <style>
+      .my-form {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        padding: 20px;
+      }
+
+      .hero-image {
+        width: 100vw;
+        height: 300px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .contact-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+      }
+
+      ::backdrop {
+        background-color: rgba(0%, 0%, 0%, 0.5);
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -18,6 +47,87 @@
         <a href="about.html">About</a>
       </nav>
     </header>
-    <h1>CONTACT SAYS HELLO</h1>
+
+    <!-- start modal with style and code -->
+    <style>
+      .my-form {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        padding: 20px;
+      }
+
+      .hero-image {
+        width: 100vw;
+        height: 300px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .contact-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+      }
+
+      ::backdrop {
+        background-color: rgba(0%, 0%, 0%, 0.5);
+      }
+    </style>
+    <script>
+      function openModal() {
+        let myDialogue = document.querySelector("dialog");
+        if (myDialogue) {
+          myDialogue.showModal();
+        }
+      }
+
+      function closeModal() {
+        let myDialogue = document.querySelector("dialog");
+        if (myDialogue) {
+          myDialogue.close();
+        }
+      }
+
+      function onSubmitted() {
+        alert("Thanks");
+      }
+    </script>
+
+    <div class="contact-message">
+      <p>Click here to send us a message and to optionally recieve our newsletter.</p>
+      <button onclick="openModal()">Contact Us</button>
+    </div>
+
+    <dialog>
+      <p>Hello!</p>
+      <form class="my-form" method="dialog" onsubmit="onSubmitted()">
+        <label for="user-email">Email</label>
+        <input id="user-email" name="user-email" type="email" required />
+
+        <div>
+          <label for="newsgroup">Receive Newletter</label>
+          <input type="checkbox" />
+        </div>
+
+        <label for="comment">Send us a comment</label>
+        <textarea name="comment" id="comment" cols="30" rows="6"></textarea>
+        <label for="marketing">How did you hear about us:</label>
+        <select id="marketing" name="marketing">
+          <option value="default">Choose…</option>
+          <option>From a friend</option>
+          <option>Web search</option>
+          <option>Advertising</option>
+        </select>
+        <div>
+          <button id="confirmBtn" value="default">Submit</button>
+          <button onclick="closeModal()" value="cancel" formmethod="dialog">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+    <!-- end modal with style and code -->
   </body>
 </html>
