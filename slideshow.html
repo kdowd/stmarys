@@ -2,88 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
-    <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
     <style>
-      .splide__slide img {
-        width: 100%;
-        height: 100%;
+      body {
+        font-family: sans-serif;
+      }
+      .main-carousel {
+        background: #eee;
+      }
+
+      .main-carousel img {
+        width: 600px;
+        height: 400px;
+        margin-right: 10px;
+        background: rgb(204, 136, 153);
         object-fit: cover;
       }
 
-      #image-carousel {
-        width: 50vw;
-        margin: auto;
-      }
-
-      .splide__arrow,
-      .splide__pagination__page {
-        background-color: chartreuse;
-        filter: drop-shadow(2px 4px 6px black);
-      }
-
-      .splide__pagination__page.is-active {
-        background-color: crimson;
+      .flickity-page-dots .dot {
+        background-color: pink;
       }
     </style>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        new Splide("#image-carousel", {
-          perPage: 4,
-          type: "slide",
-          rewind: true,
-          start: 3,
-          gap: 30,
-          speed: 1600,
-          interval: 4000,
-          perMove: 1,
-          pauseOnHover: true,
-          focus: "center",
-          height: 400,
-          autoplay: true,
-          //   autoWidth: true,
-          //   autoHeight: true,
-          breakpoints: {
-            640: {
-              perPage: 1,
-            },
-          },
-        }).mount();
-      });
-    </script>
   </head>
   <body>
-    <section id="image-carousel" class="splide" aria-label="Beautiful Images">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <img src="https://placekitten.com/g/200/300" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://placekitten.com/g/200/300" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://placekitten.com/g/200/300" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://placekitten.com/g/200/300" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://placekitten.com/g/200/300" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://placekitten.com/g/200/300" alt="" />
-          </li>
-          <li class="splide__slide">
-            <img src="https://placekitten.com/g/200/300" alt="" />
-          </li>
-        </ul>
-      </div>
-    </section>
+    <div class="main-carousel">
+      <img src="https://place-hold.it/800x600/666" alt="" />
+      <img src="https://place-hold.it/1200x800/992" alt="" />
+      <img src="https://place-hold.it/800x600/787" alt="" />
+      <img src="https://place-hold.it/800x600/909" alt="" />
+      <img src="https://place-hold.it/800x600/345" alt="" />
+    </div>
+
+    <script>
+      var elem = document.querySelector(".main-carousel");
+      var myFlickity = new Flickity(elem, {
+        // options
+        draggable: true,
+        freeScroll: true,
+        contain: true,
+        autoPlay: true,
+        pauseAutoPlayOnHover: true,
+        autoPlay: 4500,
+        fade: true,
+      });
+    </script>
   </body>
 </html>

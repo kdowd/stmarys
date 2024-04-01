@@ -8,14 +8,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400	&#38;family=Oswald:wght@500;700	&#38;display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400	&#38;family=Oswald:wght@500;700	&#38;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/colours.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/header.css" />
   </head>
+
   <body>
     <header>
       <nav>
@@ -23,6 +21,7 @@
         <a href="contact.html">Contact</a>
         <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
+        <a href="./slideshow-how.html">SlideShow Guide</a>
       </nav>
     </header>
     <div class="content">
@@ -32,14 +31,83 @@
             <li>
               <div class="card">
                 <h3>Start Site in VSCode &#38; Create External CSS</h3>
-                <p>Configure VSCode with Prettier &#38; Live Server</p>
-                <p>Linking to style sheets</p>
+                <p>Configure VSCode with Live Server</p>
+                <p>Create Basic Page. Add Header/Footer. Add Navigation. Add Content wrapper.</p>
+                <p>Now all copy the code from this page to your own page.</p>
+
+                <textarea name="" id="" cols="76" rows="30" disabled aria-label="more code">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Base</title>
+
+    <style>
+      body {
+        background-color: orangered;
+        margin: 0;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: aquamarine;
+        min-height: 100vh;
+      }
+
+      main {
+        flex-grow: 1;
+        background-color: green;
+      }
+
+      header {
+        background-color: red;
+      }
+
+      footer {
+        background-color: red;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>HEADER - TO BE OVERWRITTEN</header>
+      <main>CONTENT - TO BE OVERWRITTEN</main>
+      <footer>FOOTER - TO BE OVERWRITTEN</footer>
+    </div>
+  </body>
+</html>
+
+</textarea disabled aria-label="more code">
+                <p>Linking to style sheets. Create more than one - your code will get messy.</p>
               </div>
             </li>
             <li>
               <div class="card">
-                <h3>Fonts - Choose Headline &#38; Body Text</h3>
-                <p><a href="https://fonts.google.com/">https://fonts.google.com/</a></p>
+                <h3>Header with Navigation - Semantic HTML</h3>
+
+                <textarea aria-label="stuff" rows="12" cols="70">
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+				</textarea
+                >
+              </div>
+            </li>
+            <li>
+              <div class="card">
+                <h3>Fonts - Choose 1 Headline Font &#38; One Body Text Font</h3>
+                <p>
+                  <a style="text-decoration: underline" href="https://fonts.google.com/">https://fonts.google.com/</a>
+                </p>
                 <p>Now set your heading tags (h1,h2,h3,h4) - for site consistency.</p>
               </div>
             </li>
@@ -59,73 +127,50 @@
             <li>
               <div class="card">
                 <h3>Load a Background</h3>
-                <p><a href="https://www.svgbackgrounds.com/">https://www.svgbackgrounds.com/</a></p>
+                <p>
+                  <a href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/">https://www.svgbackgrounds.com/</a>
+                </p>
               </div>
             </li>
-            <li>
-              <div class="card">
-                <h3>Header with Navigation - Semantic HTML</h3>
 
-                <textarea rows="10" cols="40">
-
-<header>
-	<nav>
-	<a href="index.html">Home</a>
-	<a href="contact.html">Contact</a>
-	<a href="blog.html">Blog</a>
-	<a href="about.html">About</a>
-	</nav>
-</header>
-				</textarea
-                >
-              </div>
-            </li>
             <li>
               <div class="card">
                 <h3>Grids</h3>
-                <img
-                  src="https://www.positronx.io/wp-content/uploads/2019/11/angular-css-grid-layout-7256-001.jpg"
-                  alt=""
-                />
+                <img src="https://www.positronx.io/wp-content/uploads/2019/11/angular-css-grid-layout-7256-001.jpg" alt="" />
               </div>
             </li>
             <li>
               <div class="card">
                 <h3>Video</h3>
-                <iframe
-                  src="https://www.youtube.com/embed/LMyyu1bydFI"
-                  title="Auckland Vacation Travel Guide | Expedia"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
+                <iframe src="https://www.youtube.com/embed/LMyyu1bydFI" title="Auckland Vacation Travel Guide | Expedia" frameborder="0" allowfullscreen></iframe>
               </div>
             </li>
 
             <li>
               <div class="card">
-                <h3>Slideshow</h3>
-                <a href="https://splidejs.com/guides/options/">Go to Splide Site</a>
-                <p>We will use an external library for this.<br />Add these 2 tags to the head element of your page</p>
-
-                <p>1. https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css</p>
-                <p>2. https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js</p>
+                <h3>Slideshow/Carousel</h3>
+                <p>These can get complicated - we will use a code library to help us.</p>
+                <a style="text-decoration: underline" href="https://flickity.metafizzy.co/style">Click here to view Flickity Code Library</a>
+                <p>To work through this click on the SlideSho link in the main menu on this page.</p>
               </div>
             </li>
             <li>
-              <div class="card"> <h3>Page Speed</h3>
-              <p>Your browser can measure your page speed - LightHouse</p></div>
-             
+              <div class="card">
+                <h3>Page Speed</h3>
+                <p>Your browser can measure your page speed - LightHouse</p>
+              </div>
             </li>
 
             <li>
-              
-                 <div class="card">
+              <div class="card">
                 <h3>Accessibility</h3>
                 <ul>
-                  <li><p>Semantic HTML</p></li>
-                  <li><p>Alt Tags</p></li>
-                  <li><p>Splide has Accessibility built in</p></li>
+                  <li>
+                    <p>Semantic HTML</p>
+                  </li>
+                  <li>
+                    <p>Alt Tags</p>
+                  </li>
                   <li>
                     <p>https://www.designmantic.com/community/website-design-guide-color-blind.php</p>
                   </li>

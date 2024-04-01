@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Base</title>
+
+    <style>
+      body {
+        background-color: orangered;
+        margin: 0;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: aquamarine;
+        min-height: 100vh;
+      }
+
+      main {
+        flex-grow: 1;
+        background-color: green;
+      }
+
+      header {
+        background-color: red;
+      }
+
+      footer {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>HEADER - TO BE OVERWRITTEN</header>
+      <main>CONTENT - TO BE OVERWRITTEN</main>
+      <footer>FOOTER - TO BE OVERWRITTEN</footer>
+    </div>
+  </body>
+</html>
